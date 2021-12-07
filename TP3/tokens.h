@@ -1,0 +1,16 @@
+#ifndef TOKENS_H_INCLUDED
+#define TOKENS_H_INCLUDED
+
+enum TOKEN {
+	FDT, 
+	PROGRAMA, 
+	ENTERO, 
+	LEER, 
+	ESCRIBIR,
+	FIN_PROG, 
+	ASIGNACION, // desde FDT hasta ASIGNACION no hay se muestra lexema
+	IDENTIFICADOR,
+	CONSTANTE
+}; 
+
+#endif // TOKENS_H_INCLUDED
