@@ -35,7 +35,7 @@ fin-programa								return FIN_PROG;
 ";"									return ';';
 {OperadorAsignacion} 							return ASIGNACION;
 {Otros}+								printf("Error lexico: cadena desconocida: %s\n",yytext);
-{Letra}{Letra_Digito}*{Otros}+({Letra_Digito}|{Otros})*		printf("Error lexico: identificador invalido: %s\n",yytext);
+{Letra}{Letra_Digito}*{Otros}+({Letra_Digito}|{Otros})*			printf("Error lexico: identificador invalido: %s\n",yytext);
 {Digito}+{Letra}+{Letra_Digito}*					printf("Error lexico: constante invalida: %s\n",yytext);
 {Espacio}+								|
 {Comentario}								;
