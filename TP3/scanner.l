@@ -9,7 +9,7 @@
 %option nounput
 
 Letra 									[[:alpha:]]
-Digito 								[0-9]
+Digito 									[0-9]
 Letra_Digito 								[[:alnum:]]
 Espacio 								[[:space:]]
 OperadorAsignacion 							"<<"
