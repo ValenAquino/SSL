@@ -1,26 +1,24 @@
 %code top{
 	#include <stdio.h>
 	#include "scanner.h"
-	
-	#include "symbol.h" // added
-	#include "semantic.h" // added
+	#include "symbol.h" 
+	#include "semantic.h"
 }
  
 %code provides {
 	void yyerror(const char *);
 	extern int errlex;
 	extern int yynerrs;
-	
-	extern int errsemtc; // added
+	extern int errsemtc;
 }
 
 %define api.value.type{char *}
+%define parse.error verbose
 
 %defines "parser.h"					
 %output "parser.c"
 
 %start programa
-%define parse.error verbose
 
 %token FDT PROGRAMA ENTERO LEER ESCRIBIR FIN_PROG IDENTIFICADOR CONSTANTE
 %token ASIGNACION "<<"
